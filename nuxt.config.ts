@@ -1,5 +1,6 @@
+import { Configuration } from '@nuxt/types'
 
-export default {
+const nuxtConfig: Configuration = {
   mode: 'universal',
   /*
   ** Headers of the page
@@ -60,7 +61,8 @@ export default {
     /*
     ** You can extend webpack config here
     */
-    extend (config, ctx) {
+    extend () {
     }
   }
 }
+module.exports = nuxtConfig

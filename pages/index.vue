@@ -29,14 +29,19 @@
 </template>
 
 <script lang="ts">
-import Vue from 'vue'
+import { Vue, Component } from 'nuxt-property-decorator'
 import Logo from '~/components/Logo.vue'
-
-export default Vue.extend({
+import { mymoduleStore } from '@/store'
+@Component({
   components: {
     Logo
   }
 })
+export default class Index extends Vue {
+  created (): void {
+    mymoduleStore.incrWheels(1)
+  }
+}
 </script>
 
 <style>
